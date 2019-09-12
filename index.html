@@ -1,1 +1,40 @@
-This is TEST Page
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./css/style.css">
+<script src="./js/jquery-3.1.1.min.js"></script>
+<script src="./js/function_2018.js"></script>
+<link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width">
+<title>TEST | AK-system</title>
+</head>
+<body>
+
+<div id="loading">
+<img src="./img/loading.gif" />
+</div>
+<div id="v_box">
+<video id="top_v" src="./img/back_001.mp4" autoplay muted loop></video>
+<div id="control_b"><a href="#">Music On</a></div>
+</div>
+
+</body>
+<script>
+//--------------->オンロードが全て済んだらTopのスライド開始
+$(window).on('load',function(){
+ $('#loading').fadeOut(600);
+ 
+});
+
+var video = document.getElementById('top_v');
+var mute = document.getElementById('control_b');
+ mute.addEventListener('click', function () {
+  if(video.muted){
+   video.muted = false;
+  }else{
+   video.muted = true;
+  }
+});
+</script>
+</html>
